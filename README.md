@@ -33,7 +33,7 @@ http://rss.sciencedirect.com/publication/science/00086223
 
 1. install the dependencies using `npm install` or `npm i`
 
-2. Rename the file `.env.example` to `.env`, then you need to configure the file `config.ts` located in `src/config`
+2. Set up the file `.env`, then you need to configure the file `config.ts` located in `src/config`
 
 3. Go to client directory and install dependencies using `npm install` or `npm i`
 
