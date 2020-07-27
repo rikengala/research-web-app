@@ -33,15 +33,18 @@ http://rss.sciencedirect.com/publication/science/00086223
 
 2. Rename the file `.env.example` to `.env`, then you need to configure the file `config.ts` located in `src/config`
 
-3. Start the app using `npm start`
+3. Go to client directory and install dependencies using `npm install` or `npm i`
 
-4. This will start both Angular client and Node server
+4. Start the app from project root directory using `npm start`
 
-5. After that, go to: `http://localhost:4200/`
+5. This will start both Angular client and Node server
+
+6. After that, go to: `http://localhost:4200/`
 
 ### Directory Structure
 
 ```
+├── client
 ├── src
 │   ├── apiV1
 │   │   ├── auth
@@ -83,6 +86,6 @@ http://rss.sciencedirect.com/publication/science/00086223
 | `POST`   | `/authenticate`                    | Sign in with the email & password. If it's successful, then generates a token                                                               |
 | `GET`    | `/datasets`                        | Returns the details of all papers present in the DB. You need to specify the token in the header with the following format: `Authorization: Bearer your-token` |                                                                  |
 | `GET`    | `/datasets/:paperTitle`            | It returns the specified paper details in the title. You need to specify the token in the header with the following format: `Authorization: Bearer your-token` |
-| `PUT`    | `/datasets/:startDate/:endDate`    | It returns the specified paper details within the range of dates. You need to specify the token in the header with the following format: `Authorization: Bearer your-token` |                                                                                                   |
+| `GET`    | `/datasets/:startDate/:endDate`    | It returns the specified paper details within the range of dates. You need to specify the token in the header with the following format: `Authorization: Bearer your-token` |                                                                                                   |
                                                                                                                 
 
