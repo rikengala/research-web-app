@@ -1,0 +1,17 @@
+<div class="wrapper">
+  <form class="login" (submit)="register()">
+    <p class="title">Register</p>
+    <input type="text" placeholder="Name" autofocus name = "name"[(ngModel)]="credentials.name"/>
+    <i class="fa fa-user"></i>
+    <input type="text" placeholder="Email" autofocus name = "email" [(ngModel)]="credentials.email"/>
+    <i class="fa fa-envelope"></i>
+    <input type="password" placeholder="Password" name = "password" [(ngModel)]="credentials.password"/>
+    <i class="fa fa-key"></i>
+  
+    <!-- <a href="#">Forgot your password?</a> -->
+    <button>
+      <i class="spinner"></i>
+      <span class="state">Register</span>
+    </button>
+  </form>
+</div>

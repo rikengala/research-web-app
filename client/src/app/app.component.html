@@ -1,0 +1,37 @@
+<style>
+      body{
+        background: rgba(4, 40, 68, 0.85);
+      }
+      .navbar{
+        background: rgba(4, 40, 68, 0.85);
+        
+      }
+      .navbar-light .navbar-brand {
+        color:white;
+      }
+      .navbar-light .navbar-nav .nav-link{
+        color:white;
+      }
+
+</style>
+<nav class="navbar navbar-expand-lg navbar-light">
+  <a class="navbar-brand" href="#">Research Web App</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li><a class="nav-item-active nav-link" routerLink="/home"><span><i class="fa fa-home"></i></span> Home</a></li> 
+      <li><a class="nav-item nav-link" routerLink="/register"><span><i class="fa fa-user-plus" aria-hidden="true"></i></span> Register</a></li> 
+      <li *ngIf="!auth.isLoggedIn()"><a class="nav-item nav-link" routerLink="/login"><span><i class="fa fa-sign-in"></i></span> Login</a></li> 
+      <li *ngIf="auth.isLoggedIn()"><a class="nav-item nav-link" (click)="auth.logout()"><span><i class="fa fa-sign-in"></i></span> Logout</a></li>
+    </ul>
+    
+  </div>
+</nav>
+<div class="content" role="main">
+    
+  
+</div>
+<router-outlet></router-outlet>

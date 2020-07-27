@@ -1,0 +1,37 @@
+<form class = "search" id="searchform" (submit)="paperSearch()">
+  <h1>Search Papers</h1>
+  
+  <span>Search this site by Title: </span>
+  <input type="text" id="search-bar" autocomplete="off" name = "search" placeholder="Enter paper title to search" [(ngModel)]="paperTitle"/>
+  <br>
+  <span>Search this site by date:</span>
+  <span><p>Enter start date</p></span>
+  <input type="date" id="start-date" autocomplete="off" name = "search" placeholder="Enter start date" [(ngModel)]="startDate"/>  
+  <span><p>Enter end date</p></span>
+  <input type="date" id="end-date" autocomplete="off" name = "search" placeholder="Enter end date" [(ngModel)]="endingDate"/>
+  <ul class="output" style="display:none;">
+    </ul>
+  <button *ngIf="!auth.isLoggedIn()" routerLink="/login" id="submit">Search</button>
+  <button *ngIf="auth.isLoggedIn()" type="submit" id="submit">Search</button>
+
+</form>
+<div *ngIf="auth.isLoggedIn()" class="table-responsive">
+  <table class="table table-bordred table-striped">
+    <thead>
+      <th>Paper Title</th>
+      <th>Journal Title</th>
+      <th>Publication Date</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let paper of papers">
+      <td>{{paper.paperTitle}}</td>
+      <td>{{paper.journalTitle}}</td>
+      <td>{{paper.publicationDate}}</td>
+    </tr>
+  </tbody>
+  </table>
+</div>
+<link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400|Patua+One' rel='stylesheet' type='text/css'>
+<script>
+
+</script>
