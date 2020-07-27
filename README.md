@@ -8,6 +8,8 @@ You need to install [MongoDB](https://docs.mongodb.com/manual/administration/ins
 
 - [TypeScript](https://www.typescriptlang.org/) as Language
 
+- [Angular](https://angular.io/) as Front End framework
+
 - Framework: [Express.js](https://expressjs.com/)
 
 - ODM: [Mongoose](https://mongoosejs.com/)
